@@ -1,0 +1,22 @@
+$b1: #222;
+$b2: #333;
+$f1: #ddd;
+$f2: #fff;
+$e1: #aae;
+$e2: #eae;
+@mixin flexC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+@mixin flexR {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}

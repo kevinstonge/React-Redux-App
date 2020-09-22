@@ -1,3 +1,8 @@
+@import "./base.scss";
+html {
+  background-color: $b1;
+  color: $f1;
+}
 .App {
-  display: flex;
+  @include flexC();
 }
