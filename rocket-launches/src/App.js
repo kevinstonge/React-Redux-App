@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { getLaunches, getLaunch } from "./actions/actions";
+import "./App.scss";
 
-function App() {
+function App(props) {
+  useEffect(() => {
+    props.getLaunches();
+  }, [props]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>launches {props.listQuery}</p>
     </div>
   );
 }
-
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    listQuery: state.listQuery,
+    launches: state.launches,
+  };
+};
+export default connect(mapStateToProps, { getLaunch, getLaunches })(App);
