@@ -1,0 +1,16 @@
+@import "../base.scss";
+.launchCard {
+  background-color: $b2;
+  @include flexC();
+  gap: 0.5rem;
+  padding: 0.5rem;
+  .body {
+    @include flexR();
+    gap: 0.5rem;
+    .left {
+      img {
+        max-width: 15vw;
+      }
+    }
+  }
+}

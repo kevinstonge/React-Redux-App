@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getLaunches } from "./actions/actions";
+import { getLaunches, getMoreLaunches } from "./actions/actions";
 import Header from "./components/Header";
 import "./App.scss";
 import Toolbar from "./components/Toolbar";
@@ -26,4 +26,4 @@ const mapStateToProps = (state) => {
     launches: state.launches,
   };
 };
-export default connect(mapStateToProps, { getLaunches })(App);
+export default connect(mapStateToProps, { getLaunches, getMoreLaunches })(App);
