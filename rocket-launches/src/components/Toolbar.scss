@@ -1,4 +1,10 @@
 @import "../base.scss";
 .toolbar {
   @include flexR();
+  input,
+  select {
+    background-color: $e2;
+    color: $b1;
+    font-size: 110%;
+  }
 }

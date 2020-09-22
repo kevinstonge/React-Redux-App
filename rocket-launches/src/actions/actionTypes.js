@@ -1,2 +1,3 @@
 export const GET_LAUNCHES = "GET_LAUNCHES";
-export const GET_LAUNCH = "GET_LAUNCH";
+export const GET_MORE_LAUNCHES = "GET_MORE_LAUNCHES";
+export const SET_START_DATE = "SET_START_DATE";

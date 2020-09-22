@@ -1,9 +1,30 @@
 import React from "react";
 import "./Toolbar.scss";
-export default function Toolbar(props) {
+import { setStartDate } from "../actions/actions";
+import { connect } from "react-redux";
+
+function Toolbar(props) {
+  const handleChange = (e) => {
+    e.persist();
+    props.setStartDate(e.target.value);
+  };
   return (
-    <div clasName="toolbar">
-      <p>test</p>
+    <div className="toolbar">
+      <label htmlFor="startDate">
+        show launches on or after:{" "}
+        <input
+          type="date"
+          id="startDate"
+          value={props.startDate}
+          onChange={handleChange}
+        />
+      </label>
     </div>
   );
 }
+const mapStateToProps = (state) => {
+  return {
+    startDate: state.startDate,
+  };
+};
+export default connect(mapStateToProps, { setStartDate })(Toolbar);
