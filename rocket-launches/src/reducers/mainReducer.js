@@ -14,7 +14,7 @@ export default function mainReducer(state = initialState, action) {
         launches: [],
         totalLaunches: 0,
         startDate: action.payload,
-        loadingMessage: "",
+        loadingMessage: "... getting launch data ...",
         errorMessage: "",
       };
     case types.GET_LAUNCHES:
@@ -29,7 +29,7 @@ export default function mainReducer(state = initialState, action) {
         launches: action.payload.launches,
         totalLaunches: action.payload.total,
         errorMessage: "",
-        loadingMessage: "",
+        loadingMessage: "... getting more launch data ...",
       };
     case types.GET_MORE_LAUNCHES:
       return {
@@ -42,11 +42,19 @@ export default function mainReducer(state = initialState, action) {
         ...state,
         errorMessage: "",
         launches: [...state.launches, ...action.payload.launches],
+        loadingMessage: "... getting more launch data ...",
       };
     case types.GOT_ERROR:
       return {
         ...state,
         errorMessage: action.payload,
+        loadingMessage: action.payload,
+      };
+    case types.GOT_ALL_LAUNCHES:
+      return {
+        ...state,
+        errorMessage: "",
+        loadingMessage: "no more launches found",
       };
     default:
       return state;

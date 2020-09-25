@@ -35,6 +35,10 @@ export const getMoreLaunches = (startDate, offset) => (dispatch) => {
     );
 };
 
+export const gotAllLaunches = () => (dispatch) => {
+  dispatch({ type: types.GOT_ALL_LAUNCHES });
+};
+
 //fetch launches between two dates:
 //https://launchlibrary.net/1.3/launch/2020-09-22/2020-12-30
 //or just all on or after a date:
