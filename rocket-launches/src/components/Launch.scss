@@ -21,6 +21,11 @@
     @include flexC();
     padding: 0.5rem;
     justify-content: flex-start;
+    justify-items: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-self: flex-start;
+    align-self: flex-start;
     gap: 0.5rem;
     overflow-y: auto;
     flex-grow: 1;

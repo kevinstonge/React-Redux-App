@@ -35,7 +35,7 @@ export default function Launch(props) {
       </div>
       <div className="body">
         <p className="launch-countdown">{countdown}</p>
-        <p>Launch NET: {props.launch.net}</p>
+        <p>NET: {props.launch.net}</p>
         <p>
           Provider: {props.launch.lsp.name} ({props.launch.lsp.abbrev})
         </p>
