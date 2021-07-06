@@ -1,0 +1,38 @@
+@import "../base.scss";
+.launchCard {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  @include flexC();
+  background-color: $b2;
+  .header {
+    @include flexR();
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0.5rem;
+    background: linear-gradient(to bottom, $b2, $b1);
+    .lsp-abbrev {
+      font-size: x-large;
+      margin-right: 0.5rem;
+      color: $e1;
+    }
+  }
+  .body {
+    @include flexC();
+    padding: 0.5rem;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-self: flex-start;
+    align-self: flex-start;
+    gap: 0.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+    .launch-countdown {
+      font-family: "Courier New", Courier, monospace;
+      font-size: x-large;
+      color: $e1;
+    }
+  }
+}

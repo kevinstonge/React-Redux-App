@@ -1,0 +1,7 @@
+export const GET_LAUNCHES = "GET_LAUNCHES";
+export const GOT_LAUNCHES = "GOT_LAUNCHES";
+export const GET_MORE_LAUNCHES = "GET_MORE_LAUNCHES";
+export const GOT_MORE_LAUNCHES = "GOT_MORE_LAUNCHES";
+export const SET_START_DATE = "SET_START_DATE";
+export const GOT_ERROR = "GOT_ERROR";
+export const GOT_ALL_LAUNCHES = "GOT_ALL_LAUNCHES";

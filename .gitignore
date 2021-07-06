@@ -1,23 +1,23 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+/rocket-launches/node_modules
+/rocket-launches/.pnp
+/rocket-launches/.pnp.js
 
 # testing
-/coverage
+/rocket-launches/coverage
 
 # production
-/build
+/rocket-launches/build
 
 # misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+/rocket-launches/.DS_Store
+/rocket-launches/.env.local
+/rocket-launches/.env.development.local
+/rocket-launches/.env.test.local
+/rocket-launches/.env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+/rocket-launches/npm-debug.log*
+/rocket-launches/yarn-debug.log*
+/rocket-launches/yarn-error.log*

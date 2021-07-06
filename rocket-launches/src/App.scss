@@ -1,0 +1,12 @@
+@import "./base.scss";
+html {
+  background-color: $b1;
+  color: $f1;
+}
+.App {
+  @include flexC();
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
